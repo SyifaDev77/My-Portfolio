@@ -2058,3 +2058,18 @@ body .projects .projects-grid > .project-item:focus-within {
 /* If a card contains extra content that should not affect CTA alignment, ensure it scrolls */
 .projects .projects-grid > .project-item .project-info .overflow { overflow: auto; }
 
+
+/* Ensure hero content (profile image) is not hidden behind the fixed header on small screens */
+@media (max-width: 768px) {
+    /* add space at the top of the hero so the fixed header doesn't overlap the profile image */
+    .hero {
+        padding-top: 120px; /* header (~80px) + comfortable gap */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding-top: 140px; /* a bit more on very small screens */
+    }
+}
+
