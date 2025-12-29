@@ -343,6 +343,26 @@ section:not(:last-of-type) .container::after {
     section:not(:last-of-type) .container::after { width: 80%; margin-top: 28px; height: 2px; }
 }
 
+/* Small phones: center pagination and allow wrap for compact screens */
+@media (max-width: 480px) {
+    .pagination-container {
+        justify-content: center; /* center controls on small phones */
+        overflow-x: visible; /* show centered buttons instead of scroll */
+        padding: 10px 12px;
+        gap: 10px;
+        margin: 16px 0;
+        flex-wrap: wrap; /* allow buttons to wrap to multiple lines if needed */
+    }
+
+    .pagination-container .page-number,
+    .pagination-container .page-btn {
+        min-width: 48px;
+        padding: 10px 12px;
+        font-size: 1rem;
+        border-radius: 8px;
+    }
+}
+
 /* Hide divider for top/hero section */
 /* target both id and class to be safe */
 #home .container::after,
