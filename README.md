@@ -1,10 +1,3 @@
-# 👋 Hi, I’m Syifa
-
-🎓 **Computer Science (Multimedia Computing) Student**  
-💡 Interested in **AR, game development, multimedia systems, and interactive experiences**  
-🚀 Aspiring developer building practical and creative tech projects
-
----
 
 ## 🌟 About This Portfolio
 
