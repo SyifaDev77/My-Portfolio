@@ -1,7 +1,7 @@
 
 ## 🌟 About This Portfolio
 
-This GitHub profile showcases my **academic projects, experiments, and personal work** developed throughout my studies.  
+This repository showcases my **academic projects, experiments, and personal work** developed throughout my studies.  
 My focus is on combining **technical problem-solving** with **visual and interactive design**.
 
 I don’t just build things to work — I build them to **make sense, feel usable, and look clean**.
