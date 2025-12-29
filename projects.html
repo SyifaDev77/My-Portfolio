@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>More Projects — Asy Syifa'</title>
+        <!-- Favicon: purple circle SVG -->
+        <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%239c89f7' /%3E%3C/svg%3E">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <style>
+            /* Projects grid responsive columns and pagination controls */
+            .projects-grid { display:grid; gap:18px; grid-template-columns: 1fr; }
+            @media (min-width: 640px) {
+                .projects-grid { grid-template-columns: repeat(2, 1fr); }
+            }
+            @media (min-width: 1100px) {
+                .projects-grid { grid-template-columns: repeat(3, 1fr); }
+            }
+
+            /* Pagination controls */
+            .pagination-container { display:flex; justify-content:center; gap:8px; margin:24px 0; }
+            .pagination-container .page-btn { background:#222; color:#fff; border:none; padding:8px 12px; cursor:pointer; border-radius:6px; }
+            .pagination-container .page-btn[disabled] { opacity:0.45; cursor:default; }
+            .pagination-container .page-number { background:#fff; color:#222; border:1px solid #ddd; padding:6px 10px; border-radius:6px; cursor:pointer; }
+            .pagination-container .page-number.active { background:#222; color:#fff; }
+            /* Utility class used by pagination to reliably hide items */
+            .project-item.hidden { display: none !important; }
+        </style>
+    </head>
+    <body>
+        <header id="mainHeader">
+            <div class="container">
+                <a class="skip-link" href="#projects" data-i18n="skip">Skip to content</a>
+                <nav role="navigation" aria-label="Main navigation">
+                    <a class="logo" href="01 My Portfolio .html#home">Asy Syifa'</a>
+                    <ul class="nav-links" role="menubar" id="mainNav" aria-label="Primary">
+                        <li role="none"><a role="menuitem" href="01 My Portfolio .html#home" data-i18n="nav.home">Home</a></li>
+                        <li role="none"><a role="menuitem" href="01 My Portfolio .html#education" data-i18n="nav.education">Education</a></li>
+                        <li role="none"><a role="menuitem" href="01 My Portfolio .html#experience" data-i18n="nav.experience">Experience</a></li>
+                        <li role="none"><a role="menuitem" href="01 My Portfolio .html#skills" data-i18n="nav.skills">Skills</a></li>
+                        <li role="none"><a role="menuitem" href="01 My Portfolio .html#certificates" data-i18n="nav.certificates">Certificates</a></li>
+                        <li role="none"><a role="menuitem" href="01 My Portfolio .html#design" data-i18n="nav.design">Design</a></li>
+                        <li role="none"><a role="menuitem" href="projects.html" data-i18n="nav.projects">Projects</a></li>
+                        <li role="none"><a role="menuitem" href="01 My Portfolio .html#contact" data-i18n="nav.contact">Contact</a></li>
+                          <li role="none" class="nav-lang">
+                            <div class="lang-toggle" role="group" aria-label="Language selector">
+                                <button class="lang-btn" data-lang="en" aria-pressed="true">EN</button>
+                                <button class="lang-btn" data-lang="bm" aria-pressed="false">BM</button>
+                            </div>
+                        </li>
+                    </ul>
+                    <button class="mobile-menu-btn" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-bars" aria-hidden="true"></i>
+                    </button>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <section id="projects" class="projects">
+                <div class="container">
+                    <div class="section-title">
+                        <h2 data-i18n="nav.projects">Projects</h2>
+                    </div>
+
+                    <p class="section-intro" data-i18n="projects.intro">This section highlights selected projects that demonstrate my computer science background alongside my expertise in multimedia computing, interactive systems, and application development.</p>
+
+                    <div class="projects-grid">
+
+                        <div class="project-item">
+                            <div class="project-img">
+                                <img src="assets/project/RIC.PNG" alt="Research Ideation Canvas" class="project-photo" onerror="this.style.display='none'">
+                            </div>
+                            <div class="project-info">
+                                <h3>Research Ideation Canvas - GERIC</h3>
+                                <p>An interactive web-based system collaboratively developed during my internship to organize and visualize research ideas using structured frameworks and collaborative ideation tools.</p>
+                            </div>
+                        </div>
+
+                        <div class="project-item">
+                            <div class="project-img"><i class="fas fa-mobile-alt"></i></div>
+                            <div class="project-info">
+                                <h3>GIMS - GERIC Integrated Management System</h3>
+                                <p>A web-based management system developed during my internship to support GERIC’s internal operations by centralizing data management, reporting, and administrative workflows into a single integrated platform.</p>
+                            </div>
+                        </div>
+
+                        <div class="project-item">
+                            <div class="project-img"><i class="fa-solid fa-volcano"></i></div>
+                            <div class="project-info">
+                                <h3>AR Volcano</h3>
+                                <p>ARVolcano App was developed for my Final Year Project (FYP) with the goal of enhancing the learning experience in earth science education. The application uses augmented reality to project a 3D volcano model into the user’s environment, allowing them to rotate, zoom, and explore different volcanic layers. It also includes animations that simulate eruptions and interactive information panels to help users understand how volcanoes work.</p>
+                            </div>
+                        </div>
+
+                        <div class="project-item">
+                            <div class="project-img"><i class="fa-solid fa-cat"></i></div>
+                            <div class="project-info">
+                                <h3>Jungle Paws Web Based System</h3>
+                                <p>Jungle Paws is a web-based booking system, designed specifically for managing reservations at a cat hotel. The system allows users to create an account, update their profile, and browse available cat-care packages before making a booking. Once a reservation is completed, the system automatically generates a printable receipt for record-keeping.</p>
+                            </div>
+                        </div>
+
+                        <div class="project-item">
+                            <div class="project-img"><i class="fas fa-mobile-alt"></i></div>
+                            <div class="project-info">
+                                <h3>Sign Language Detection App</h3>
+                                <p>This application was developed as part of a course assignment to demonstrate the implementation of Artificial Intelligence (AI) algorithms through machine learning techniques for sign language gesture detection and interpretation.</p>
+                            </div>
+                        </div>
+
+                        <div class="project-item">
+                            <div class="project-img"><i class="fa-solid fa-volcano"></i></div>
+                            <div class="project-info">
+                                <h3>Math Bingo Game App</h3>
+                                <p>An educational game application designed to make learning basic mathematics more engaging through interactive bingo-style gameplay. The app reinforces arithmetic skills while providing a fun and user-friendly experience.</p>
+                            </div>
+                        </div>
+
+                        <div class="project-item">
+                            <div class="project-img"><i class="fa-solid fa-cat"></i></div>
+                            <div class="project-info">
+                                <h3>Blood Bank Hospital System</h3>
+                                <p>A web-based system designed to manage blood donation and inventory records for hospital use. The system supports efficient tracking of donor information, blood stock levels, and basic administrative workflows to improve data organization and accessibility.</p>
+                            </div>
+                        </div>
+
+                        <div class="project-item">
+                            <div class="project-img"><i class="fas fa-mobile-alt"></i></div>
+                            <div class="project-info">
+                                <h3>Froggy Forest - Game</h3>
+                                <p>A 2D casual game set in a forest environment, designed to provide a light and engaging gameplay experience. Players control a frog character to navigate obstacles and challenges, focusing on simple mechanics and enjoyable interaction.</p>
+                            </div>
+                        </div>
+
+                        <div class="project-item">
+                            <div class="project-img"><i class="fa-solid fa-volcano"></i></div>
+                            <div class="project-info">
+                                <h3>RoomCraft - Web Based</h3>
+                                <p>A web-based application that allows users to design and visualize room layouts interactively. The system helps users experiment with space planning and interior arrangements through an intuitive and user-friendly interface.</p>
+                            </div>
+                        </div>
+
+                        <div class="project-item">
+                            <div class="project-img"><i class="fa-solid fa-cat"></i></div>
+                            <div class="project-info">
+                                <h3>Soil Monitoring System - ARDUINO</h3>
+                                <p>An IoT-based system developed using Arduino to monitor soil conditions such as moisture levels. The system collects sensor data in real time to support basic analysis and decision-making for plant care and agriculture use.</p>
+                            </div>
+                        </div>
+
+                        <div class="project-item">
+                            <div class="project-img"><i class="fas fa-mobile-alt"></i></div>
+                            <div class="project-info">
+                                <h3>Data Mining</h3>
+                                <p>A course assignment that applied data mining techniques using WEKA to analyze datasets and extract meaningful patterns and insights. The project demonstrates the process of preprocessing, analyzing, and interpreting data for decision-making purposes.</p>
+                            </div>
+                        </div>
+
+                        <div class="project-item">
+                            <div class="project-img"><i class="fa-solid fa-volcano"></i></div>
+                            <div class="project-info">
+                                <h3>Scratch - Game</h3>
+                                <p>A simple interactive game developed using Scratch to demonstrate programming logic, event handling, and basic game design concepts. The project emphasizes learning through play and creative problem-solving.</p>
+                            </div>
+                        </div>
+
+                        <div class="project-item">
+                            <div class="project-img"><i class="fa-solid fa-cat"></i></div>
+                            <div class="project-info">
+                                <h3>Audio Compression</h3>
+                                <p>A project focused on reducing audio file sizes while maintaining sound quality. Techniques in digital signal processing were applied to analyze and compress audio data efficiently, demonstrating understanding of multimedia and data optimization concepts.</p>
+                            </div>
+                        </div>
+
+                        <div class="project-item">
+                            <div class="project-img"><i class="fas fa-mobile-alt"></i></div>
+                            <div class="project-info">
+                                <h3>Eon-XR - Meta Experience</h3>
+                                <p>An interactive XR experience created using the EON-XR application as part of a course assignment. The project allowed me to design engaging 3D and 360° content and explore immersive user experiences across mobile and VR devices.</p>
+                            </div>
+                        </div>
+
+                        <div class="project-item">
+                            <div class="project-img"><i class="fas fa-mobile-alt"></i></div>
+                            <div class="project-info">
+                                <h3>Blender Project</h3>
+                                <p>3D objects modeled and designed using Blender to demonstrate proficiency in 3D modeling, texturing, and visualization. The project showcases creativity and understanding of spatial design principles.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                        <div id="paginationContainer" class="pagination-container" aria-label="Projects pagination"></div>
+                </div>
+            </section>
+        </main>
+
+        <footer id="mainFooter">
+            <div class="container">
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+                <div class="copyright">
+                    <p>&copy; 2025 Asy Syifa'. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+            // Reveal elements (projects page doesn't include the full homepage loader script)
+            document.addEventListener('DOMContentLoaded', function() {
+                var header = document.getElementById('mainHeader');
+                if (header) header.classList.add('loaded');
+
+                var projectsSection = document.querySelector('.projects');
+                if (projectsSection) projectsSection.classList.add('loaded');
+
+                var footer = document.querySelector('footer');
+                if (footer) footer.classList.add('loaded');
+
+                // Mobile menu toggle with ARIA
+                const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+                const navLinks = document.querySelector('.nav-links');
+                if (mobileMenuBtn && navLinks) {
+                    mobileMenuBtn.addEventListener('click', () => {
+                        const opened = navLinks.classList.toggle('active');
+                        mobileMenuBtn.setAttribute('aria-expanded', opened ? 'true' : 'false');
+                        mobileMenuBtn.innerHTML = opened
+                            ? '<i class="fas fa-times" aria-hidden="true"></i>'
+                            : '<i class="fas fa-bars" aria-hidden="true"></i>';
+                    });
+
+                    navLinks.querySelectorAll('a').forEach(link => {
+                        link.addEventListener('click', () => {
+                            navLinks.classList.remove('active');
+                            mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                            mobileMenuBtn.innerHTML = '<i class="fas fa-bars" aria-hidden="true"></i>';
+                        });
+                    });
+                }
+
+                // Append Read More CTA to every project card if not present
+                document.querySelectorAll('.project-info').forEach(function(info) {
+                    if (!info.querySelector('.card-cta')) {
+                        var a = document.createElement('a');
+                        a.href = '#';
+                        a.className = 'card-cta';
+                        a.setAttribute('data-i18n','readMore');
+                        a.textContent = 'Read More';
+                        info.appendChild(a);
+                    }
+                });
+
+                // Pagination: 1 row per page (columns × 1)
+                (function setupPagination() {
+                    const rowsPerPage = 1; // one visual row per page
+                    const grid = document.querySelector('.projects-grid');
+                    const items = Array.from(document.querySelectorAll('.project-item'));
+                    const pager = document.getElementById('paginationContainer');
+                    if (!grid || !items.length || !pager) return;
+
+                    let currentPage = 0;
+                    let totalPages = 1;
+
+                    pager.tabIndex = 0;
+                    pager.setAttribute('role', 'navigation');
+                    pager.setAttribute('aria-label', 'Projects pagination');
+
+                    pager.addEventListener('keydown', function(e) {
+                        if (!totalPages) return;
+                        if (e.key === 'ArrowLeft') { e.preventDefault(); if (currentPage > 0) renderPage(currentPage - 1); }
+                        else if (e.key === 'ArrowRight') { e.preventDefault(); if (currentPage < totalPages - 1) renderPage(currentPage + 1); }
+                        else if (e.key === 'Home') { e.preventDefault(); renderPage(0); }
+                        else if (e.key === 'End') { e.preventDefault(); renderPage(totalPages - 1); }
+                    });
+
+                    function getColumnsCount() {
+                        const style = window.getComputedStyle(grid);
+                        const template = style.gridTemplateColumns || '';
+                        const cols = template.trim() ? template.split(' ').length : 1;
+                        return Math.max(1, cols);
+                    }
+
+                    function renderPage(pageIndex) {
+                        const cols = getColumnsCount();
+                        const itemsPerPage = cols * rowsPerPage;
+                        totalPages = Math.max(1, Math.ceil(items.length / itemsPerPage));
+                        currentPage = Math.max(0, Math.min(pageIndex, totalPages - 1));
+
+                        // debug: log pagination state
+                        console.debug('[pagination] items:', items.length, 'cols:', cols, 'itemsPerPage:', itemsPerPage, 'currentPage will be:', currentPage);
+
+                        // Render only the current page items into the grid (clear then append)
+                        const start = currentPage * itemsPerPage;
+                        const end = start + itemsPerPage;
+                        const pageItems = items.slice(start, end);
+
+                        grid.innerHTML = '';
+                        pageItems.forEach(it => grid.appendChild(it));
+
+                        // debug: count items currently in DOM
+                        const visibleCount = grid.querySelectorAll('.project-item').length;
+                        console.debug('[pagination] renderPage start,end:', start, end, 'visible in grid:', visibleCount);
+
+                        pager.innerHTML = '';
+
+                        const prev = document.createElement('button');
+                        prev.className = 'page-btn';
+                        prev.textContent = 'Prev';
+                        prev.setAttribute('aria-label', 'Previous page');
+                        prev.disabled = currentPage === 0;
+                        prev.setAttribute('aria-disabled', prev.disabled ? 'true' : 'false');
+                        prev.addEventListener('click', () => renderPage(currentPage - 1));
+                        pager.appendChild(prev);
+
+                        // Decide which page numbers to show on this viewport.
+                        function getVisiblePages(total, current) {
+                            const pages = [];
+                            const smallScreen = window.innerWidth <= 768; // treat <=768 as small
+                            if (!smallScreen) {
+                                for (let i = 0; i < total; i++) pages.push(i);
+                                return pages;
+                            }
+
+                            // On small screens: show up to 3 page numbers centered around current when possible
+                            if (total <= 3) {
+                                for (let i = 0; i < total; i++) pages.push(i);
+                                return pages;
+                            }
+
+                            if (current <= 1) {
+                                pages.push(0, 1, 2);
+                                return pages;
+                            }
+
+                            if (current >= total - 2) {
+                                pages.push(total - 3, total - 2, total - 1);
+                                return pages;
+                            }
+
+                            // middle case: show current-1, current, current+1
+                            pages.push(current - 1, current, current + 1);
+                            return pages;
+                        }
+
+                        const visible = getVisiblePages(totalPages, currentPage);
+                        visible.forEach(i => {
+                            const b = document.createElement('button');
+                            b.className = 'page-number' + (i === currentPage ? ' active' : '');
+                            b.textContent = (i + 1).toString();
+                            b.setAttribute('aria-label', 'Go to page ' + (i + 1));
+                            if (i === currentPage) b.setAttribute('aria-current', 'page'); else b.removeAttribute('aria-current');
+                            b.addEventListener('click', () => renderPage(i));
+                            pager.appendChild(b);
+                        });
+
+                        const next = document.createElement('button');
+                        next.className = 'page-btn';
+                        next.textContent = 'Next';
+                        next.setAttribute('aria-label', 'Next page');
+                        next.disabled = currentPage === totalPages - 1;
+                        next.setAttribute('aria-disabled', next.disabled ? 'true' : 'false');
+                        next.addEventListener('click', () => renderPage(currentPage + 1));
+                        pager.appendChild(next);
+
+                        const firstVisible = items.find(it => !it.classList.contains('hidden'));
+                        if (firstVisible) {
+                            firstVisible.setAttribute('tabindex', '-1');
+                            firstVisible.focus({ preventScroll: true });
+                        }
+                    }
+
+                    setTimeout(() => renderPage(0), 50);
+                    window.addEventListener('load', function() { setTimeout(() => renderPage(currentPage), 120); });
+                    document.querySelectorAll('.projects-grid img').forEach(img => { if (!img.complete) img.addEventListener('load', () => setTimeout(() => renderPage(currentPage), 80)); });
+                    let resizeTimer = null;
+                    window.addEventListener('resize', function() { clearTimeout(resizeTimer); resizeTimer = setTimeout(() => renderPage(currentPage), 150); });
+                })();
+            });
+        </script>
+        <script>
+            (function(){
+                const translations = {
+                    en: {
+                        skip: 'Skip to content',
+                        'nav.home': 'Home',
+                        'nav.education': 'Education',
+                        'nav.experience': 'Experience',
+                        'nav.skills': 'Skills',
+                        'nav.certificates': 'Certificates',
+                        'nav.design': 'Design',
+                        'nav.projects': 'Projects',
+                        'nav.resume': 'Resume',
+                        'nav.contact': 'Contact',
+                        'projects.intro': 'This section highlights selected projects that demonstrate my computer science background alongside my expertise in multimedia computing, interactive systems, and application development.',
+                        'readMore': 'Read More'
+                    },
+                    bm: {
+                        skip: 'Langkau ke kandungan',
+                        'nav.home': 'Utama',
+                        'nav.education': 'Pendidikan',
+                        'nav.experience': 'Pengalaman',
+                        'nav.skills': 'Kemahiran',
+                        'nav.certificates': 'Sijil',
+                        'nav.design': 'Reka Bentuk',
+                        'nav.projects': 'Projek',
+                        'nav.resume': 'Resume',
+                        'nav.contact': 'Hubungi',
+                        'projects.intro': 'Bahagian ini menyerlahkan projek terpilih yang mempamerkan latar belakang sains komputer saya bersama kepakaran dalam pengkomputeran multimedia, sistem interaktif, dan pembangunan aplikasi.',
+                        'readMore': 'Baca Lagi'
+                    }
+                };
+
+                function applyLang(lang){
+                    document.querySelectorAll('[data-i18n]').forEach(el=>{
+                        const key = el.getAttribute('data-i18n');
+                        if(translations[lang] && translations[lang][key]) el.textContent = translations[lang][key];
+                    });
+                    document.querySelectorAll('.lang-btn').forEach(b=>{
+                        const pressed = b.getAttribute('data-lang') === lang;
+                        b.setAttribute('aria-pressed', pressed ? 'true' : 'false');
+                    });
+                }
+
+                const stored = localStorage.getItem('siteLang') || 'en';
+                applyLang(stored);
+                document.querySelectorAll('.lang-btn').forEach(btn=>{
+                    btn.addEventListener('click', ()=>{
+                        const lang = btn.getAttribute('data-lang');
+                        localStorage.setItem('siteLang', lang);
+                        applyLang(lang);
+                    });
+                });
+            })();
+        </script>
+    </body>
+</html>

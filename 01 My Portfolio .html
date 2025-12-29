@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Asy Syifa' | Computer Science</title>
+    <!-- Favicon: purple circle SVG -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%239c89f7' /%3E%3C/svg%3E">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-logo">Asy Syifa'</div>
+        <div class="loading-text">Loading Portfolio</div>
+        <div class="loading-bar-container">
+            <div class="loading-progress" id="loadingProgress"></div>
+        </div>
+        <div class="loading-percentage" id="loadingPercentage">0%</div>
+        <div class="loading-animation">
+            <div class="loading-dot"></div>
+            <div class="loading-dot"></div>
+            <div class="loading-dot"></div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <header id="mainHeader">
+        <div class="container">
+            <a class="skip-link" href="#home" data-i18n="skip">Skip to content</a>
+            <nav role="navigation" aria-label="Main navigation">
+                <a class="logo" href="#home">Asy Syifa'</a>
+                <ul class="nav-links" role="menubar" id="mainNav" aria-label="Primary">
+                    <li role="none"><a role="menuitem" href="#home" data-i18n="nav.home">Home</a></li>
+                    <li role="none"><a role="menuitem" href="#education" data-i18n="nav.education">Education</a></li>
+                    <li role="none"><a role="menuitem" href="#experience" data-i18n="nav.experience">Experience</a></li>
+                    <li role="none"><a role="menuitem" href="#skills" data-i18n="nav.skills">Skills</a></li>
+                    <li role="none"><a role="menuitem" href="#certificates" data-i18n="nav.certificates">Certificates</a></li>
+                    <li role="none"><a role="menuitem" href="#design" data-i18n="nav.design">Design</a></li>
+                    <li role="none"><a role="menuitem" href="projects.html" data-i18n="nav.projects">Projects</a></li>
+                    <li role="none"><a role="menuitem" href="#contact" data-i18n="nav.contact">Contact</a></li>
+                    <li role="none" class="nav-lang">
+                        <div class="lang-toggle" role="group" aria-label="Language selector">
+                            <button class="lang-btn" data-lang="en" aria-pressed="true">EN</button>
+                            <button class="lang-btn" data-lang="bm" aria-pressed="false">BM</button>
+                        </div>
+                    </li>
+                </ul>
+                <button class="mobile-menu-btn" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars" aria-hidden="true"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="floating-element float-1"></div>
+        <div class="floating-element float-2"></div>
+        <div class="floating-element float-3"></div>
+        
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Hello, I'm <span class="gradient-text">Asy Syifa'</span></h1>
+                    <h2 data-i18n="hero.h2">Undergraduate Student</h2>
+                    <p data-i18n="hero.p">Hi! I’m an undergraduate student pursuing a Bachelor of Computer Science (Hons.) in Multimedia Computing. I’m deeply interested in the space where technology meets creativity—especially in digital media, interactive design, and multimedia application development.</p>
+                    <div class="hero-ctas">
+                        <a href="projects.html" class="btn" data-i18n="hero.view">View My Work</a>
+                        <a href="assets/Asy_Syifa_Resume.pdf" class="btn btn-outline" target="_blank" rel="noopener" aria-label="Open Resume" data-i18n="hero.resume">Resume / CV</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="profile-img">
+
+                        <svg class="orbit-svg" viewBox="0 0 400 400">
+                            <defs>
+    <linearGradient id="orbitGradient" gradientUnits="userSpaceOnUse"
+                    x1="0" y1="0" x2="400" y2="400">
+        <stop offset="0%" stop-color="#9c89f7"/>
+        <stop offset="50%" stop-color="#e6d7ff"/>
+        <stop offset="100%" stop-color="#9c89f7"/>
+    </linearGradient>
+</defs>
+        <ellipse cx="200" cy="200" rx="175" ry="120"
+                 class="orbit-line" />
+    </svg>
+                        <!-- Profile photo or fallback icon -->
+                        <img src="assets/syifa.jpeg" alt="Asy Syifa'" class="profile-photo">
+                        <i class="fas fa-code"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll to explore</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education">
+        <div class="container">
+            <div class="section-title">
+                <div class="title-decor">
+                <h2><span class="dec-left"></span> Education <span class="dec-right"></span></h2>
+                </div>
+            </div>
+
+            <div class="education-grid">
+                <div class="edu-item">
+                    <div class="edu-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="edu-details">
+                        <h3>Bachelor of Computer Science (Hons.) Multimedia Computing</h3>
+                        <p>Universiti Teknologi MARA (UiTM), Shah Alam</p>
+                        <div class="edu-date">Expected Graduation : 2026</div>
+                    </div>
+                </div>
+
+                <div class="edu-item">
+                    <div class="edu-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <div class="edu-details">
+                        <h3>Diploma in Computer Science</h3>
+                        <p>Universiti Teknologi MARA (UiTM), Machang</p>
+                        <div class="edu-date">2020 &ndash; 2023</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <div class="section-title">
+                <h2>Experience</h2>
+            </div>
+            <div class="experience-list">
+                <div class="exp-item">
+                    <h3>System Development Intern</h3>
+                    <h4>Global Entrepreneurship Research and Innovation Center (GERIC), UMK</h4>
+                    <p>September 2025 &ndash; December 2025  | Pengkalan Chepa, Kelantan</p>
+                    <ul>
+                        <li>Designed system architecture and UI/UX system using Laravel for GERIC Integrated Management System and Research Canvas Ideation System.</li>
+                        <li>Updated the Official GERIC Website with updated content and features.</li>
+                        <li>Achieved Copyright for GERIC Integrated Management System.</li>
+                        <li>Designed Logos for GERIC related projects.</li>
+                        <li>Designed multi-volume book and professional presentation slides for the Vice Chancellor using Canva.</li>
+                        <li>Managed event logistics and certificate issuance for the BUSINESS CASE STUDY IDEA 2025 competition.</li>
+                    </ul>
+                    <div class="exp-tags" aria-hidden="true">
+                        <span class="skill">Laravel</span>
+                        <span class="skill">UI/UX Design</span>
+                        <span class="skill">System Architecture</span>
+                        <span class="skill">Project Management</span>
+                        <span class="skill">Logo Design</span>
+                        <span class="skill">Adobe Illustrator</span>
+                    </div>
+                </div>
+                <div class="exp-item">
+                    <h3>Website Developer Intern</h3>
+                    <h4>Student Affairs Department,UiTM</h4>
+                    <p> September 2022 &ndash; February 2023 | Machang, Kelantan</p>
+                    <ul>
+                        <li>Developed a web-based E-Merit System for managing student merit records</li>
+                        <li>Designed and structured system workflows for submission, approval, and monitoring</li>
+                        <li>Enhanced efficiency and data accuracy by replacing manual merit tracking</li>
+                    </ul>
+                    <div class="exp-tags" aria-hidden="true">
+                        <span class="skill">HTML</span>
+                        <span class="skill">CSS</span>
+                        <span class="skill">Full stack Developer</span>
+                        <span class="skill">Project Management</span>
+                    </div>
+                </div>
+                <div class="exp-item">
+                    <h3>Store Assistant and Pet Groomer at Hotel Meow Enterprises</h3>
+                    <p> September 2023 &ndash; August 2024</p>
+                    <ul>
+                        <li>Assisted in daily store operations including cashiering, inventory management, and customer service.</li>
+                        <li>Provided grooming services for cats, ensuring their well-being and hygiene.</li>
+                        <li>Maintained a clean and organized store environment.</li>
+                        <li>Design infographic poster and videos for promotional activities.</li>
+                    </ul>
+                </div>
+            </div>
+<br><br>
+            <div class="section-title">
+                <h2>Participation And Leadership</h2>
+            </div>
+
+            <div class="experience-list">
+                <div class="exp-item">
+                    <h3>Treasurer of Science Computer Society Club</h3>
+                    <p> Diploma 2023</p>
+                    <ul>
+                        <li>Organized and participated in various workshop and events.</li>
+                        <li>Project Manager for "BE CREATIVE WITH CANVA" programme and collab with Husnina Afiqah(Social Media Designer & Freelancer).</li>
+                        <li>Participate in "INDUSTRIAL TALK" with Dayana Kemeseky (Technologist & Content Creator).</li>
+                        <li>Multimedia Committee for "POWERPOINT NIGHT" programme.</li>
+                        <li>Emcee for "Santapan AidilFitri" event, collab with ITCOMM Club.</li>
+                        <li>Managed club finances and budgeting.</li>
+                    </ul>
+                </div>
+
+                <div class="exp-item">
+                    <h3>Multimedia Committee for SULAM Programme</h3>
+                    <p> Degree 2025</p>
+                    <ul>
+                        <li>Designed visual and multimedia materials for programme activities</li>
+                        <li>Supported content planning to ensure clear and effective communication</li>
+                        <li>Collaborated with team members to align visuals with programme objectives</li>
+                        <li>Assisted in documenting and promoting programme activities through media</li>
+                    </ul>
+                </div>
+
+
+            </div>
+
+
+        </div>
+    </section>
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-title">
+                <h2>Skills</h2>
+            </div>
+
+            <p> Multimedia and Design Tools</p>
+
+            <div class="skills-grid">
+                <a class="skill-card" href="#" role="button" aria-label="Blender">
+                    <div class="skill-icon">
+                        <img src="assets/skills/Blender.png" alt="Blender logo">
+                    </div>
+                    <div class="skill-name">Blender</div>
+                </a>
+
+                <a class="skill-card" href="#" role="button" aria-label="Canva">
+                    <div class="skill-icon">
+                        <img src="assets/skills/Canva.png" alt="Canva logo">
+                    </div>
+                    <div class="skill-name">Canva</div>
+                </a>
+
+                <a class="skill-card" href="#" role="button" aria-label="Affinity">
+                    <div class="skill-icon">
+                        <img src="assets/skills/affinity.png" alt="Affinity logo">
+                    </div>
+                    <div class="skill-name">Affinity</div>
+                </a>
+
+                <a class="skill-card" href="#" role="button" aria-label="Vuforia AR">
+                    <div class="skill-icon">
+                        <img src="assets/skills/vuforia.jfif" alt="Vuforia logo">
+                    </div>
+                    <div class="skill-name">Vuforia AR</div>
+                </a>
+
+                <a class="skill-card" href="#" role="button" aria-label="Unity 3D/2D">
+                    <div class="skill-icon">
+                        <img src="assets/skills/unity.png" alt="Unity logo">
+                    </div>
+                    <div class="skill-name">Unity 3D/2D</div>
+                </a>
+
+                <a class="skill-card" href="#" role="button" aria-label="Photoshop">
+                    <div class="skill-icon">
+                        <img src="assets/skills/ps.jpg" alt="Photoshop logo">
+                    </div>
+                    <div class="skill-name">Photoshop</div>
+                </a>
+
+                <a class="skill-card" href="#" role="button" aria-label="Adobe Illustrator">
+                    <div class="skill-icon">
+                        <img src="assets/skills/illustrator.png" alt="Adobe Illustrator logo"> 
+                    </div>
+                    <div class="skill-name">Adobe Illustrator</div>
+                </a>
+
+                   <a class="skill-card" href="#" role="button" aria-label="Figma">
+                    <div class="skill-icon">
+                        <img src="assets/skills/FIGMA.png" alt="Figma logo"> 
+                    </div>
+                    <div class="skill-name">Figma</div>
+                </a>
+
+            </div>
+
+            <br> 
+            <p> Programming Languages and Frameworks </p>
+
+            <div class="skills-grid">
+                <a class="skill-card" href="#" role="button" aria-label="HTML5">
+                    <div class="skill-icon">
+                        <img src="assets/skills/html.png" alt="HTML5 logo">
+                    </div>
+                    <div class="skill-name">HTML5</div>
+                </a>
+
+                <a class="skill-card" href="#" role="button" aria-label="CSS3">
+                    <div class="skill-icon">
+                        <img src="assets/skills/CSS.png" alt="CSS3 logo">
+                    </div>
+                    <div class="skill-name">CSS3</div>
+                </a>   
+
+                <a class="skill-card" href="#" role="button" aria-label="JavaScript">
+                    <div class="skill-icon">
+                        <img src="assets/skills/JS.jpg" alt="JavaScript logo">  
+                    </div>
+                    <div class="skill-name">JavaScript</div>
+                </a>
+
+                <a class="skill-card" >
+                    <div class="skill-icon">
+                        <img src="assets/skills/logo-php-mysql.jpg" alt="PHP logo">                
+                    </div>
+                    <div class="skill-name">PHP & MySQL</div>
+                </a>
+
+                <a class="skill-card" >
+                    <div class="skill-icon">
+                        <img src="assets/skills/LARAVEL.png" alt="Laravel logo">        
+                    </div>
+                    <div class="skill-name">Laravel</div>
+                </a>    
+
+                 <a class="skill-card" >
+                    <div class="skill-icon">
+                        <img src="assets/skills/c++.png" alt="C++ logo">        
+                    </div>
+                    <div class="skill-name">C++</div>
+                </a>
+                
+                 <a class="skill-card" >
+                    <div class="skill-icon">
+                        <img src="assets/skills/c.jpg" alt="C# logo">        
+                    </div>
+                    <div class="skill-name">C#</div>
+                </a> 
+                
+                 <a class="skill-card" >
+                    <div class="skill-icon">
+                        <img src="assets/skills/github.png" alt="GitHub logo">        
+                    </div>
+                    <div class="skill-name">GitHub</div>
+                </a>  
+
+                 <a class="skill-card" >
+                    <div class="skill-icon">
+                        <img src="assets/skills/phython.png" alt="Python logo">        
+                    </div>
+                    <div class="skill-name">Python</div>
+                </a>  
+
+            </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="certificates">
+        <div class="container">
+            <div class="section-title">
+                <h2>Certificates</h2>
+            </div>
+            <div class="cert-list">
+
+                <a class="cert-item" href="https://coursera.org/share/a73de36a6cedb05275fd3b9719a9dc1a" target="_blank" rel="noopener" aria-label="Open Foundation of user experience (UX) design certificate">
+                    <h4>Foundation of User Experience (UX) Design</h4>
+                    <p>Issued by Google Coursera — 28 Dec 2025</p>
+                    <p>Show Credential <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></p>
+                </a>
+
+                <a class="cert-item" href="https://www.credly.com/badges/1eba2b58-c881-41ce-8b4d-3d976ee4db9e/public_url" target="_blank" rel="noopener" aria-label="Open Fundamentals of Sustainable and Technology certificate">
+                    <h4>Fundamentals of Sustainable and Technology</h4>
+                    <p>Issued by IBMSkillBuild — 19 Jan 2025</p>
+                    <p>Show Credential <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></p>
+                </a>
+
+                <a class="cert-item" href="https://www.credly.com/badges/85faae21-51bb-4e0c-b881-264cc92da935/public_url" target="_blank" rel="noopener" aria-label="Open Artificial Intelligence Fundamentals certificate">
+                    <h4>Artificial Intelligence Fundamentals</h4>
+                    <p>Issued by IBMSkillBuild — 13 Nov 2024</p>
+                    <p>Show Credential <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></p>
+                </a>
+
+                <a class="cert-item" href="" target="_blank" rel="noopener" aria-label="">
+                    <h4>Placeholder</h4>
+                </a>
+
+                <a class="cert-item" href="" target="_blank" rel="noopener" aria-label="">
+                    <h4>Placeholder</h4>
+                </a>
+                <a class="cert-item" href="" target="_blank" rel="noopener" aria-label="">
+                    <h4>Placeholder</h4>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-title">
+                <h2>Projects</h2>
+            </div>
+            <div class="projects-grid">
+                <div class="project-item">
+                    <div class="project-img">
+                        <i class="fa-solid fa-volcano"></i>
+                    </div>
+                    <div class="project-info">
+                        <h3>AR Volcano</h3>
+                        <p>ARVolcano App was developed for my Final Year Project (FYP) with the goal of enhancing the learning experience in earth science education. The application uses augmented reality to project a 3D volcano model into the user’s environment, allowing them to rotate, zoom, and explore different volcanic layers. It also includes animations that simulate eruptions and interactive information panels to help users understand how volcanoes work.</p>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <div class="project-img">
+                        <i class="fa-solid fa-cat"></i>
+                    </div>
+                    <div class="project-info">
+                        <h3>Jungle Paws Web Based System</h3>
+                        <p>Jungle Paws is a web-based booking system,designed specifically for managing reservations at a cat hotel. The system allows users to create an account, update their profile, and browse available cat-care packages before making a booking. Once a reservation is completed, the system automatically generates a printable receipt for record-keeping. </p>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <div class="project-img">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div class="project-info">
+                        <h3>Sign Language Detection App</h3>
+                        <p>This application was developed as part of a course assignment to demonstrate the implementation of Artificial Intelligence (AI) algorithms through machine learning techniques for sign language gesture detection and interpretation.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="more-projects">
+                <a href="projects.html" class="btn btn-outline" data-i18n="moreProjects">More Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section - White Background -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Get In Touch</h2>
+            </div>
+            <div class="contact-container">
+                <div class="contact-cards" role="list" aria-label="Contact methods">
+                    <div class="contact-card-wrap">
+                        <a id="emailCard" class="contact-card" role="listitem" href="mailto:Syifa.edu77@gmail.com" aria-label="Email Syifa" data-i18n-aria="contact.email_aria">
+                            <i class="fas fa-envelope" aria-hidden="true"></i>
+                        </a>
+                        <div class="contact-label" data-i18n="contact.email">Email</div>
+                    </div>
+
+                    <div class="contact-card-wrap">
+                        <a class="contact-card" role="listitem" href="#" aria-label="View GitHub" data-i18n-aria="contact.github_aria">
+                            <i class="fab fa-github" aria-hidden="true"></i>
+                        </a>
+                        <div class="contact-label" data-i18n="contact.github">GitHub</div>
+                    </div>
+
+                    <div class="contact-card-wrap">
+                        <a class="contact-card" role="listitem" href="#" aria-label="View LinkedIn" data-i18n-aria="contact.linkedin_aria">
+                            <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                        </a>
+                        <div class="contact-label" data-i18n="contact.linkedin">LinkedIn</div>
+                    </div>
+                </div>
+                <div class="contact-note">
+                    <p data-i18n="contact.note">I'd love to discuss opportunities, collaborations, or creative projects</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="mainFooter">
+        <div class="container">
+            <div class="social-links">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-dribbble"></i></a>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Asy Syifa'. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Robust loading & header interaction setup
+        document.addEventListener('DOMContentLoaded', function() {
+            // Loading screen: only operate if all elements exist, otherwise immediately reveal content
+            const loadingScreen = document.getElementById('loadingScreen');
+            const loadingProgress = document.getElementById('loadingProgress');
+            const loadingPercentage = document.getElementById('loadingPercentage');
+            
+            function revealMainContent() {
+                // Show header/footer
+                document.getElementById('mainHeader')?.classList.add('loaded');
+                document.getElementById('mainFooter')?.classList.add('loaded');
+
+                // Add 'loaded' to every section so none remain hidden by CSS
+                document.querySelectorAll('section').forEach(sec => sec.classList.add('loaded'));
+
+                // Make sure back-to-top button state is correct
+                document.getElementById('backToTop')?.classList.remove('hidden');
+            }
+
+            if (loadingScreen && loadingProgress && loadingPercentage) {
+                let progress = 0;
+                const interval = setInterval(() => {
+                    progress += Math.random() * 15;
+                    if (progress > 100) progress = 100;
+                    loadingProgress.style.width = progress + '%';
+                    loadingPercentage.textContent = Math.round(progress) + '%';
+                    if (progress >= 100) {
+                        clearInterval(interval);
+                        setTimeout(() => {
+                            loadingScreen.classList.add('hidden');
+                            setTimeout(revealMainContent, 100);
+                        }, 500);
+                    }
+                }, 150);
+            } else {
+                // missing loading elements — reveal immediately
+                revealMainContent();
+            }
+
+            // Setup header/menu interactions after header is present
+            function setupHeaderInteractions() {
+                const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+                const navLinks = document.querySelector('.nav-links');
+                if (!mobileMenuBtn || !navLinks) return false;
+
+                // Mobile toggle
+                mobileMenuBtn.addEventListener('click', () => {
+                    const opened = navLinks.classList.toggle('active');
+                    mobileMenuBtn.setAttribute('aria-expanded', opened ? 'true' : 'false');
+                    mobileMenuBtn.innerHTML = opened
+                        ? '<i class="fas fa-times" aria-hidden="true"></i>'
+                        : '<i class="fas fa-bars" aria-hidden="true"></i>';
+                });
+
+                // Close mobile menu when clicking on a link
+                navLinks.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        navLinks.classList.remove('active');
+                        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                        mobileMenuBtn.innerHTML = '<i class="fas fa-bars" aria-hidden="true"></i>';
+                    });
+                });
+
+                // Smooth scrolling for navigation links (internal anchors)
+                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                    anchor.addEventListener('click', function(e) {
+                        const targetId = this.getAttribute('href');
+                        if (!targetId || targetId === '#') return;
+                        const targetElement = document.querySelector(targetId);
+                        if (!targetElement) return;
+                        e.preventDefault();
+                        if (window.innerWidth <= 768) {
+                            navLinks.classList.remove('active');
+                            mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                        }
+                        targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    });
+                });
+
+                return true;
+            }
+
+            if (!setupHeaderInteractions()) {
+                // wait for shared header injection if present
+                document.addEventListener('sharedHeaderLoaded', function() { setupHeaderInteractions(); }, { once: true });
+                // final fallback attempt
+                setTimeout(() => setupHeaderInteractions(), 600);
+            }
+        });
+
+        // Add floating animation to project items on hover (safe guard)
+        document.querySelectorAll('.project-item').forEach(item => {
+            item.addEventListener('mouseenter', function() { this.style.animation = 'float 0.5s ease-in-out'; });
+            item.addEventListener('mouseleave', function() { this.style.animation = ''; });
+        });
+
+        // Add header background on scroll (guard header existence)
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('mainHeader');
+            if (!header) return;
+            if (window.scrollY > 100) {
+                header.style.backgroundColor = 'rgba(18, 18, 18, 0.98)';
+                header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.1)';
+            } else {
+                header.style.backgroundColor = 'rgba(18, 18, 18, 0.95)';
+                header.style.boxShadow = 'none';
+            }
+        });
+
+        // Check if profile image exists, otherwise show fallback icon
+        document.addEventListener('DOMContentLoaded', function() {
+            const profilePhoto = document.querySelector('.profile-photo');
+            const fallbackIcon = document.querySelector('.profile-img i');
+            setTimeout(() => {
+                if (profilePhoto && profilePhoto.complete && profilePhoto.naturalHeight !== 0) {
+                    if (fallbackIcon) fallbackIcon.style.display = 'none';
+                } else {
+                    if (fallbackIcon) fallbackIcon.style.display = 'block';
+                    if (profilePhoto) profilePhoto.style.display = 'none';
+                }
+            }, 1000);
+        });
+
+        // Add floating animation to contact form inputs on focus
+        document.querySelectorAll('.form-group input, .form-group textarea').forEach(input => {
+            input.addEventListener('focus', function() {
+                if (this.parentElement) {
+                    this.parentElement.style.transform = 'translateY(-5px)';
+                    this.parentElement.style.transition = 'transform 0.3s';
+                }
+            });
+            input.addEventListener('blur', function() { if (this.parentElement) this.parentElement.style.transform = 'translateY(0)'; });
+        });
+
+        // Responsive adjustments (no scroll-snapping)
+        function checkScreenSize() {
+            // Leave sections to natural document flow and scrolling.
+            document.body.style.overflowY = 'auto';
+            document.querySelectorAll('section').forEach(section => {
+                section.style.height = 'auto';
+                section.style.minHeight = '100vh';
+                section.style.scrollSnapAlign = 'none';
+            });
+        }
+
+        window.addEventListener('load', checkScreenSize);
+        window.addEventListener('resize', checkScreenSize);
+    </script>
+    <script>
+        // Simple i18n: English (en) and Bahasa Melayu (bm)
+        (function(){
+            const translations = {
+                en: {
+                    skip: 'Skip to content',
+                    'nav.home': 'Home',
+                    'nav.education': 'Education',
+                    'nav.experience': 'Experience',
+                    'nav.skills': 'Skills',
+                    'nav.certificates': 'Certificates',
+                    'nav.design': 'Design',
+                    'nav.projects': 'Projects',
+                    'nav.resume': 'Resume',
+                    'nav.contact': 'Contact',
+                    'hero.view': 'View My Work',
+                    'hero.resume': 'Resume / CV',
+                    'hero.h2': 'Undergraduate Student',
+                    'hero.p': 'Hi! I’m an undergraduate student pursuing a Bachelor of Computer Science (Hons.) in Multimedia Computing. I’m deeply interested in the space where technology meets creativity—especially in digital media, interactive design, and multimedia application development.',
+                    'moreProjects': 'More Projects',
+                    'contact.note': 'I\'d love to discuss opportunities, collaborations, or creative projects',
+                    'readMore': 'Read More',
+                    'contact.title': 'Get In Touch',
+                    'contact.email': 'Email',
+                    'contact.github': 'GitHub',
+                    'contact.linkedin': 'LinkedIn',
+                    'contact.email_aria': 'Email Syifa',
+                    'contact.github_aria': 'View GitHub',
+                    'contact.linkedin_aria': 'View LinkedIn',
+                    'backToTop': 'Back to top'
+                },
+                bm: {
+                    skip: 'Langkau ke kandungan',
+                    'nav.home': 'Utama',
+                    'nav.education': 'Pendidikan',
+                    'nav.experience': 'Pengalaman',
+                    'nav.skills': 'Kemahiran',
+                    'nav.certificates': 'Sijil',
+                    'nav.design': 'Reka Bentuk',
+                    'nav.projects': 'Projek',
+                    'nav.resume': 'Resume',
+                    'nav.contact': 'Hubungi',
+                    'hero.view': 'Lihat Kerja Saya',
+                    'hero.resume': 'Resume / CV',
+                    'hero.h2': 'Pelajar Ijazah',
+                    'hero.p': 'Hai! Saya seorang pelajar ijazah yang mengikuti Ijazah Sarjana Muda Sains Komputer (Kepujian) dalam Pengkomputeran Multimedia. Saya berminat dalam gabungan teknologi dan kreativiti — terutamanya dalam media digital, reka bentuk interaktif dan pembangunan aplikasi multimedia.',
+                    'moreProjects': 'Lebih Banyak Projek',
+                    'contact.note': 'Saya suka berbincang tentang peluang, kerjasama, atau projek kreatif',
+                    'readMore': 'Baca Lagi',
+                    'contact.title': 'Hubungi Saya',
+                    'contact.email': 'Emel',
+                    'contact.github': 'GitHub',
+                    'contact.linkedin': 'LinkedIn',
+                    'contact.email_aria': 'Hantar emel kepada Syifa',
+                    'contact.github_aria': 'Lihat GitHub',
+                    'contact.linkedin_aria': 'Lihat LinkedIn',
+                    'backToTop': 'Kembali ke atas'
+                }
+            };
+
+            function applyLang(lang){
+                document.querySelectorAll('[data-i18n]').forEach(el=>{
+                    const key = el.getAttribute('data-i18n');
+                    if(translations[lang] && translations[lang][key]) el.textContent = translations[lang][key];
+                });
+                document.querySelectorAll('[data-i18n-aria]').forEach(el=>{
+                    const key = el.getAttribute('data-i18n-aria');
+                    if(translations[lang] && translations[lang][key]) el.setAttribute('aria-label', translations[lang][key]);
+                });
+                document.querySelectorAll('[data-i18n-aria]').forEach(()=>{});
+                // back-to-top aria
+                document.querySelectorAll('[data-i18n-aria]').forEach(()=>{});
+                // update lang button states
+                document.querySelectorAll('.lang-btn').forEach(b=>{
+                    const pressed = b.getAttribute('data-lang') === lang;
+                    b.setAttribute('aria-pressed', pressed ? 'true' : 'false');
+                });
+            }
+
+            // init
+            const stored = localStorage.getItem('siteLang') || 'en';
+            applyLang(stored);
+
+            document.querySelectorAll('.lang-btn').forEach(btn=>{
+                btn.addEventListener('click', ()=>{
+                    const lang = btn.getAttribute('data-lang');
+                    localStorage.setItem('siteLang', lang);
+                    applyLang(lang);
+                });
+            });
+        })();
+    </script>
+    <!-- Back to top button -->
+    <button id="backToTop" class="back-to-top hidden" aria-label="Back to top" data-i18n-aria="backToTop">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <script>
+        // Back to top behavior
+        (function() {
+            const btn = document.getElementById('backToTop');
+            if (!btn) return;
+
+            function update() {
+                if (window.scrollY > window.innerHeight / 2) btn.classList.remove('hidden');
+                else btn.classList.add('hidden');
+            }
+
+            btn.addEventListener('click', function() {
+                const target = document.getElementById('home');
+                if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                else window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+            btn.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    btn.click();
+                }
+            });
+
+            window.addEventListener('scroll', update, { passive: true });
+            window.addEventListener('load', update);
+            update();
+        })();
+    </script>
+    <script>
+        // Open Gmail compose in new tab, fallback to mailto if popup blocked
+        (function() {
+            const emailCard = document.getElementById('emailCard');
+            if (!emailCard) return;
+            const to = 'Syifa.edu77@gmail.com';
+            const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=${encodeURIComponent(to)}`;
+            const mailto = `mailto:${encodeURIComponent(to)}`;
+
+            emailCard.addEventListener('click', function(e) {
+                e.preventDefault();
+                const win = window.open(gmailUrl, '_blank');
+                // if popup blocked or window not opened, fallback to mailto
+                if (!win) {
+                    window.location.href = mailto;
+                }
+            });
+        })();
+    </script>
+</body>
+</html>
