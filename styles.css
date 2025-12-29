@@ -1257,6 +1257,7 @@ section.projects {
     flex-direction: column;
     justify-content: flex-start; /* keep title and description near top */
     gap: 8px; /* small gap between title and paragraph */
+    align-items: center; /* center children so CTAs sit in the middle */
 
 /* Project card hover effects */
 .project-item {
@@ -1371,8 +1372,7 @@ section.projects {
 .project-info a {
     display: inline-block;
     margin-top: 12px;
-    align-self: center;
-    padding: 8px 14px;
+    padding: 12px 18px;
     border-radius: 12px;
     font-size: 0.95rem;
     font-weight: 600;
@@ -1380,6 +1380,10 @@ section.projects {
     color: var(--white);
     background: linear-gradient(90deg, var(--medium-purple), var(--light-purple));
     transition: transform 0.18s ease, box-shadow 0.18s ease, opacity 0.18s;
+    text-align: center;
+    box-sizing: border-box;
+    width: auto;
+    max-width: 420px; /* keep a sensible max so CTAs don't get too wide on large screens */
 }
 
 .project-info a:hover,
@@ -1396,9 +1400,12 @@ section.projects {
 /* Mobile: ensure project card CTA stays centered on small screens */
 @media (max-width: 768px) {
     .project-info a {
-        align-self: center;
+        display: block;
+        width: calc(100% - 36px);
+        max-width: none;
         margin-left: auto;
         margin-right: auto;
+        padding: 12px 16px;
     }
 }
 
