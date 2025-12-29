@@ -1393,6 +1393,15 @@ section.projects {
     outline-offset: 3px;
 }
 
+/* Mobile: ensure project card CTA stays centered on small screens */
+@media (max-width: 768px) {
+    .project-info a {
+        align-self: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
 .project-item {
     background: linear-gradient(145deg, var(--gray), #222);
     border-radius: 15px;
