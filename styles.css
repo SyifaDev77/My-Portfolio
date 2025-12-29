@@ -1162,6 +1162,32 @@ section.projects {
 /* Utility class used by pagination to reliably hide items */
 .project-item.hidden { display: none !important; }
 
+/* Mobile: make pagination horizontally scrollable and compact */
+@media (max-width: 768px) {
+    .pagination-container {
+        justify-content: flex-start; /* allow scrolling from the left */
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        padding: 6px 8px;
+        gap: 8px;
+        margin: 18px 0;
+    }
+
+    .pagination-container::-webkit-scrollbar { display: none; }
+
+    .pagination-container .page-number,
+    .pagination-container .page-btn {
+        flex: 0 0 auto;
+        min-width: 44px;
+        padding: 6px 8px;
+        font-size: 0.95rem;
+        border-radius: 8px;
+    }
+
+    /* reduce visual weight so pagination doesn't overwhelm cards */
+    .pagination-container .page-number { background: rgba(255,255,255,0.95); }
+}
+
 .project-item {
     background: linear-gradient(145deg, var(--gray), #222);
     border-radius: 15px;
