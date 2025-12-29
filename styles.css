@@ -668,10 +668,12 @@ section:not(:last-of-type) .container::after {
     padding-top: 80px;
 }
 
-.experience .experience-list {
+.experience .experience-list,
+.experience-list,
+#experience .experience-list {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 36px; /* increased gap for clearer separation between experience cards */
     width: 100%;
 }
 
@@ -685,6 +687,8 @@ section:not(:last-of-type) .container::after {
     transform: translateY(0);
     transition: transform 0.32s ease, box-shadow 0.32s ease;
 }
+/* ensure spacing even if grid rules are overridden elsewhere */
+.exp-item { margin-bottom: 0; }
 
 .experience.loaded .exp-item {
     animation: eduSlide 0.7s cubic-bezier(.2,.9,.2,1) forwards;
@@ -706,6 +710,11 @@ section:not(:last-of-type) .container::after {
     .experience .exp-item li {
         font-size: 1rem; /* slightly smaller on mobile */
     }
+
+    /* Reduce gap a bit on narrow screens for compact layout */
+    .experience .experience-list,
+    .experience-list,
+    #experience .experience-list { gap: 20px; }
 }
 .exp-tags { margin-top:12px; display:flex; gap:8px; flex-wrap:wrap; }
 .exp-tags .skill { background: linear-gradient(90deg, var(--medium-purple), var(--light-purple)); color: #fff; padding:6px 12px; border-radius:20px; font-size:0.95rem; box-shadow: 0 6px 14px rgba(92,53,177,0.15); border: none; opacity: 1; transform: scale(1); transition: opacity 0.25s ease, transform 0.15s ease; }
@@ -1144,6 +1153,15 @@ section.projects {
     grid-auto-rows: auto; /* let rows grow based on content height */
 }
 
+/* Pagination controls (moved from projects.html) */
+.pagination-container { display:flex; justify-content:center; gap:8px; margin:24px 0; }
+.pagination-container .page-btn { background:#222; color:#fff; border:none; padding:8px 12px; cursor:pointer; border-radius:6px; }
+.pagination-container .page-btn[disabled] { opacity:0.45; cursor:default; }
+.pagination-container .page-number { background:#fff; color:#222; border:1px solid #ddd; padding:6px 10px; border-radius:6px; cursor:pointer; }
+.pagination-container .page-number.active { background:#222; color:#fff; }
+/* Utility class used by pagination to reliably hide items */
+.project-item.hidden { display: none !important; }
+
 .project-item {
     background: linear-gradient(145deg, var(--gray), #222);
     border-radius: 15px;
@@ -1248,7 +1266,7 @@ section.projects {
     color: var(--text-medium);
 }
 
-/* Read More CTA inside cards */
+/* Consolidated card CTA styles (single definition) */
 .card-cta {
     display: inline-block;
     margin-top: 12px;
