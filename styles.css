@@ -2161,6 +2161,57 @@ body .projects .projects-grid > .project-item:focus-within {
     min-height: 0 !important;
     padding-bottom: 12px !important; /* space for CTA */
 }
+
+/* Design grid: image-only cards with overlay */
+.design-grid .project-item {
+    padding: 0 !important;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.design-card,
+.design-grid .project-item {
+    position: relative;
+}
+
+.design-img img,
+.design-img video,
+.design-grid .project-item .project-photo {
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.design-overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 40%, rgba(0,0,0,0.7) 100%);
+    color: #fff;
+    padding: 12px;
+    transform: translateY(100%);
+    transition: transform 0.28s ease, opacity 0.28s ease;
+    opacity: 0;
+}
+
+.design-card:hover .design-overlay,
+.design-grid .project-item:hover .design-overlay,
+.design-card:focus-within .design-overlay,
+.design-grid .project-item:focus-within .design-overlay {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Mobile: make entire card tappable to toggle overlay; show overlay by default on very small screens */
+@media (max-width: 480px) {
+    .design-img img,
+    .design-img video,
+    .design-grid .project-item .project-photo { height: 160px; }
+
+    .design-overlay { transform: translateY(0); opacity: 1; }
+}
 .projects .projects-grid > .project-item .project-info {
     flex: 1 1 auto !important;
     display: flex !important;
@@ -2195,6 +2246,79 @@ body .projects .projects-grid > .project-item:focus-within {
 @media (max-width: 480px) {
     .hero {
         padding-top: 140px; /* a bit more on very small screens */
+    }
+}
+
+/* Lightbox Modal */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.lightbox-content {
+    max-width: 90%;
+    max-height: 85%;
+    object-fit: contain;
+    box-shadow: 0 4px 30px rgba(156, 137, 247, 0.3);
+    border-radius: 8px;
+}
+
+.lightbox-video {
+    display: none;
+    background: #000;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: var(--white);
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10000;
+}
+
+.lightbox-close:hover,
+.lightbox-close:focus {
+    color: var(--light-purple);
+    transform: scale(1.1);
+}
+
+.lightbox-caption {
+    text-align: center;
+    color: var(--white);
+    padding: 20px;
+    max-width: 80%;
+    font-size: 1.1rem;
+    margin-top: 15px;
+}
+
+@media (max-width: 768px) {
+    .lightbox-content {
+        max-width: 95%;
+        max-height: 80%;
+    }
+    
+    .lightbox-close {
+        top: 10px;
+        right: 20px;
+        font-size: 35px;
+    }
+    
+    .lightbox-caption {
+        font-size: 1rem;
+        padding: 15px;
     }
 }
 
